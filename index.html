@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website - Home</title>
+        <!-- Meta description for SEO -->
+        <meta name="description" content="A sample website demonstrating proper HTML5 structure">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body{
+    background-color: rgb(18, 149, 193);
+    font-style: wavy;
+}
+/* Styling for the header */
+.header {
+    background-color: lightblue;
+    padding: 20px;
+}
+/* Styling for the list */
+ol {
+    list-style-type: lower-roman;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-radius: 8px;
+    background-color: lightblue;
+    width: 100px;
+    color: rgb(221, 35, 35);
+}
+/* Styling for the table */
+table {
+    width: 10%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid #bd8e8e;
+    padding: 8px;
+    text-align: left;
+}
+/* Styling for the image */
+.image-container {
+text-align: center;
+margin-bottom: 2px;
+}
+.image-container img {
+max-width: 30%;
+height: auto;
+position: relative;
+}
+img {
+    max-width: 25%;
+    height: auto;
+    margin: 10px;
+}
+/* Styling for the label for text input */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+/* Styling for the radio button */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+
+}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div>
+                <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-c1d8-6230-877f-db76a2741332/raw?se=2025-04-10T05%3A48%3A21Z&sp=r&sv=2024-08-04&sr=b&scid=3fa57ad3-9bfa-50fc-a8ca-62ce88d3481e&skoid=e4438ed3-2a6f-4fd3-bf63-222012dc627c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-09T20%3A58%3A35Z&ske=2025-04-10T20%3A58%3A35Z&sks=b&skv=2024-08-04&sig=ctEmKFv4Na4rNv8JCBZgImi04/EBGHaLVpydwHRWavk%3D" alt="Image 1">
+                <img src="https://sdmntprwestus.oaiusercontent.com/files/00000000-3ea4-6230-90e1-416339935460/raw?se=2025-04-10T06%3A35%3A19Z&sp=r&sv=2024-08-04&sr=b&scid=f4cd6af5-1a7a-50cc-bf66-75c4ebd8abe9&skoid=e4438ed3-2a6f-4fd3-bf63-222012dc627c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-09T20%3A53%3A35Z&ske=2025-04-10T20%3A53%3A35Z&sks=b&skv=2024-08-04&sig=Tl5tcuciXNKuVGmj8xn8MveLMIyLFUEgSEnRYWu5U0Q%3D"alt="image 2">
+            </div>
+            <div>
+                <ol class="roman">
+                    <li>COME</li>
+                    <li>WE</li>
+                    <li>HAVE</li>
+                    <li>FUN</li>
+                    <li>TOGERHER</li>
+                    <li>FOREVER</li>
+                </ol>
+            </div>
+            <p>Welcome to our website! We're dedicated to providing you with the best experience possible.</p>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    </tr>
+                </thead>
+                    
+            </table>
+        </div>
+        
+        <h2>Registration Form</h2>
+        <form action="/submit" method="POST">
+            <!-- Name Field -->
+            <div class="form-group">
+                <label for="name">Name <span style="color:red;">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+    
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="email">Email <span style="color:red;">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+    
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="password">Password <span style="color:red;">*</span></label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="6">
+            </div>
+    
+            <!-- Date Field -->
+            <div class="form-group">
+                <label for="dob">Date of Birth <span style="color:red;">*</span></label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+    
+            <!-- Dropdown Field -->
+            <div class="form-group">
+                <label for="country">Country <span style="color:red;">*</span></label>
+                <select id="country" name="country" required>
+                    <option value="">Select your country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                </select>
+            </div>
+    
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label>Gender <span style="color:red;">*</span></label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="gender" value="male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" required> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other" required> Other
+                    </label>
+                </div>
+            </div>
+    
+            <!-- Checkboxes -->
+            <div class="form-group">
+                <label>Interests</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="interests" value="sports"required> Dancing
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="music"required> Singing
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interests" value="travel"required> Playing Instruments
+                    </label>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
