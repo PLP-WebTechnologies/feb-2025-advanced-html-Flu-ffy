@@ -12,7 +12,31 @@ CREATE TABLE student (
 
 --2.) Write an SQL statement to insert at least 3 records into the student table.
 
-INSERT INTO student (id, fullName, age) VALUES
+INSERT INTO student (id, fullName, age) VALUESCREATE TABLE student (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullName VARCHAR(100) NOT NULL,
+    age INT CHECK (age >= 0)
+);
+
+INSERT INTO student (fullName, age) VALUES
+('Joel Doe', 21),
+('Amos Moses', 24),
+('James Kina', 27),
+('Amina Abdi', 20),
+('Zawadi Kabisa', 21),
+('Azina Imara', 23);
+
+UPDATE student
+SET age = 20
+WHERE id = 2;
+
+CREATE INDEX idx_fullName ON student (fullName);
+
+CREATE VIEW student_view AS
+SELECT id, fullName, age
+FROM student;
+
+SELECT * FROM student_view WHERE age > 20;
 (1, 'Joel Doe', 21),
 (2, 'Amos Moses', 24),
 (3, 'James Kina', 27),
